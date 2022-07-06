@@ -33,16 +33,17 @@ a:visited {
 }
 
 .icon {
-  height: 10px;
-  width: 10px;
-  -webkit-filter: invert(0.5);
-          filter: invert(0.5);
+  height: 20px;
+  width: 20px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .special-font {
   font-family: allura;
   color: #a67245;
   letter-spacing: 1px;
+  font-size: 2rem;
 }
 
 h2 {
@@ -51,6 +52,7 @@ h2 {
 }
 
 header {
+  padding: 20px 0;
   text-align: center;
   margin: 0 auto;
   width: 100%;
@@ -85,7 +87,7 @@ header nav .nav-container {
 header nav span {
   font-family: allura;
   color: #eeeeee;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 600;
   text-align: left;
 }
@@ -113,7 +115,7 @@ header nav .navbar li a {
   width: 100%;
   display: inline-block;
   color: #eeeeee;
-  font-size: 10px;
+  font-size: 0.9rem;
 }
 
 header nav .social-network {
@@ -129,23 +131,40 @@ header nav .social-network {
           justify-content: flex-end;
 }
 
+header > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 0;
+}
+
 header .welcome {
-  margin-top: 60px;
-  font-size: 1.2rem;
+  margin-top: 80px;
+  font-size: 3rem;
 }
 
 header h1 {
-  margin: -10px 0 5px;
+  margin: -20px 0 70px;
   text-transform: uppercase;
   font-family: poppins;
   color: #eeeeee;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   letter-spacing: 2px;
 }
 
 header img {
-  width: 12px;
-  height: 12px;
+  width: 45px;
+  height: 45px;
 }
 
 header #desc {
@@ -153,9 +172,9 @@ header #desc {
   text-transform: uppercase;
   font-family: roboto;
   line-height: 15px;
-  font-size: 0.5rem;
+  font-size: 0.9rem;
   padding: 10px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 main .section1 {
@@ -169,31 +188,44 @@ main .section1 {
 
 main .section1 .section1-left {
   background: #eeeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .section1 .section1-left div {
-  width: 95%;
-  margin: 10px auto;
+  height: 50vh;
+  margin: 10px;
   padding: 10px;
-  border: 0.5px dashed #a67245;
+  border: 1px dashed #a67245;
+}
+
+main .section1 .section1-left div .special-font {
+  font-size: 2rem;
 }
 
 main .section1 .section1-left div h2 {
-  font-family: 1rem;
-  font-size: 0.8rem;
+  font-family: poppins;
+  font-size: 1.5rem;
   margin-top: -7px;
 }
 
 main .section1 .section1-left div img {
-  width: 15px;
-  height: 15px;
-  margin: 10px;
+  width: 30px;
+  height: 30px;
+  margin: 15px auto;
 }
 
 main .section1 .section1-left div .text {
   font-family: roboto;
-  font-size: 0.5rem;
-  padding-bottom: 10px;
+  font-size: 0.9rem;
+  padding-bottom: 5px;
 }
 
 main .section1 .section1-left div .men-avatar {
@@ -207,13 +239,13 @@ main .section1 .section1-left div .men-avatar {
 
 main .section1 .section1-left div h3 {
   font-family: poppins;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 main .section1 .section1-left div h4 {
   text-transform: uppercase;
-  font-size: 0.3rem;
+  font-size: 0.7rem;
   color: #b1b6a7;
 }
 
@@ -222,9 +254,226 @@ main .section1 .section1-right {
   background: url(../img/store-01.jpg) center/cover;
 }
 
+main .section2 {
+  position: relative;
+}
+
 main .section2 .section2-top {
+  padding: 20px 0 70px;
   width: 100%;
-  min-height: 50vh;
+  min-height: 60vh;
   background: #21201e;
+}
+
+main .section2 .section2-top img.icon {
+  width: 15px;
+  height: 15px;
+  margin: 20px auto;
+}
+
+main .section2 .section2-top .menu {
+  margin: 0 auto;
+  width: 60%;
+}
+
+main .section2 .section2-top .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .section2 .section2-top .menu ul li {
+  font-family: roboto;
+  padding: 10px;
+}
+
+main .section2 .section2-top .menu ul li a {
+  color: #eeeeee;
+  font-size: 0.9rem;
+  font-weight: 200;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #b1b6a7;
+}
+
+main .section2 .section2-hover {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  width: 60%;
+  background: #eeeeee;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-top: 5px solid #a67245;
+}
+
+main .section2 .section2-hover .foods-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 49% 49%;
+      grid-template-columns: 49% 49%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+
+main .section2 .section2-hover .foods-card .card-left,
+main .section2 .section2-hover .foods-card .card-right {
+  padding: 10px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 60% 10%;
+      grid-template-columns: 30% 60% 10%;
+  margin-top: 10px;
+  border-bottom: 1px solid #b1b6a7;
+}
+
+main .section2 .section2-hover .foods-card .card-left .food-img,
+main .section2 .section2-hover .foods-card .card-right .food-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .section2 .section2-hover .foods-card .card-left .food-img img,
+main .section2 .section2-hover .foods-card .card-right .food-img img {
+  width: 100%;
+}
+
+main .section2 .section2-hover .foods-card .card-left .food-content,
+main .section2 .section2-hover .foods-card .card-right .food-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .section2 .section2-hover .foods-card .card-left .food-content .plat,
+main .section2 .section2-hover .foods-card .card-right .food-content .plat {
+  font-family: poppins;
+  font-weight: 200;
+  font-size: 1rem;
+  color: #161616;
+  text-transform: uppercase;
+  display: block;
+  text-align: left;
+}
+
+main .section2 .section2-hover .foods-card .card-left .food-content p,
+main .section2 .section2-hover .foods-card .card-right .food-content p {
+  font-family: roboto;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+main .section2 .section2-hover .foods-card .card-left .price,
+main .section2 .section2-hover .foods-card .card-right .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1rem;
+  color: #a67245;
+  font-family: poppins;
+}
+
+main .section2 .bg-menu {
+  min-height: 75vh;
+  background: url(../img/bg-menu-01.jpg) center/cover;
+}
+
+main .reservation {
+  height: 85vh;
+  width: 100%;
+  background: #21201e;
+}
+
+main .reservation .reservation-container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 65px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 34% 66%;
+      grid-template-columns: 34% 66%;
+}
+
+main .reservation .reservation-container .reservation-left {
+  background: black;
+}
+
+main .reservation .reservation-container .reservation-left .timeOpen-container {
+  padding: 10px;
+  margin: 15px;
+  border: 1px dashed white;
+}
+
+main .reservation .reservation-container .reservation-left .timeOpen-container h2 {
+  font-family: poppins;
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: -10px;
+  font-size: 1.2rem;
+}
+
+main .reservation .reservation-container .reservation-left .timeOpen-container img {
+  margin: 20px 0 25px;
+}
+
+main .reservation .reservation-container .reservation-left .timeOpen-container h3 {
+  color: #a67245;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+main .reservation .reservation-container .reservation-left .timeOpen-container p {
+  color: white;
+  font-size: 0.9rem;
+  font-family: roboto;
+}
+
+main .reservation .reservation-container .reservation-right {
+  background: white;
+  padding: 50px 10px;
+}
+
+main .reservation .reservation-container .reservation-right .special-font {
+  font-weight: 600;
+  margin-bottom: -10px;
+}
+
+main .reservation .reservation-container .reservation-right img {
+  margin: 25px 0;
 }
 /*# sourceMappingURL=index.css.map */

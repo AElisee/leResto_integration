@@ -7,29 +7,36 @@ main {
 
     .section1-left {
       background: $white1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       div {
-        width: 95%;
-        margin: 10px auto;
+        height: 50vh;
+        margin: 10px;
         padding: 10px;
-        border: 0.5px dashed $brown1;
+        border: 1px dashed $brown1;
+
+        .special-font {
+          font-size: 2rem;
+        }
 
         h2 {
-          font-family: 1rem;
-          font-size: 0.8rem;
+          font-family: $font2;
+          font-size: 1.5rem;
           margin-top: -7px;
         }
 
         img {
-          width: 15px;
-          height: 15px;
-          margin: 10px;
+          width: 30px;
+          height: 30px;
+          margin: 15px auto;
         }
 
         .text {
           font-family: $font1;
-          font-size: 0.5rem;
-          padding-bottom: 10px;
+          font-size: 0.9rem;
+          padding-bottom: 5px;
         }
 
         .men-avatar {
@@ -43,13 +50,13 @@ main {
 
         h3 {
           font-family: $font2;
-          font-size: 0.7rem;
+          font-size: 1rem;
           font-weight: 400;
         }
 
         h4 {
           text-transform: uppercase;
-          font-size: 0.3rem;
+          font-size: 0.7rem;
           color: $gray2;
         }
       }
@@ -62,10 +69,190 @@ main {
   }
 
   .section2 {
+    position: relative;
+
+
     .section2-top {
+      padding: 20px 0 70px;
       width: 100%;
-      min-height: 50vh;
+      min-height: 60vh;
       background: $black1;
+
+      img.icon {
+        width: 15px;
+        height: 15px;
+        margin: 20px auto;
+      }
+
+      .menu {
+        margin: 0 auto;
+        width: 60%;
+
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          li {
+            font-family: $font1;
+            padding: 10px;
+
+            a {
+              color: $white1;
+              font-size: 0.9rem;
+              font-weight: 200;
+              padding-bottom: 5px;
+              border-bottom: 1px solid $gray2;
+            }
+          }
+        }
+      }
+    }
+
+    .section2-hover {
+      position: absolute;
+      top: 150px;
+      left: 50%;
+      width: 60%;
+      background: $white1;
+      transform: translateX(-50%);
+      border-top: 5px solid $brown1;
+
+
+      .foods-card {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        justify-content: space-between;
+        padding: 10px;
+
+
+        .card-left,
+        .card-right {
+          padding: 10px 0;
+          display: grid;
+          grid-template-columns: 30% 60% 10%;
+          margin-top: 10px;
+          border-bottom: 1px solid $gray2;
+
+          .food-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .food-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+            .plat {
+              font-family: $font2;
+              font-weight: 200;
+              font-size: 1rem;
+              color: rgb(22, 22, 22);
+              text-transform: uppercase;
+              display: block;
+              text-align: left;
+            }
+
+            p {
+              font-family: $font1;
+              font-size: 0.9rem;
+              text-align: left;
+            }
+          }
+
+          .price {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1rem;
+            color: $brown1;
+            font-family: $font2;
+          }
+        }
+      }
+    }
+
+    .bg-menu {
+      min-height: 75vh;
+      background: url(../img/bg-menu-01.jpg) center/cover;
+    }
+  }
+
+  .reservation {
+    height: 85vh;
+    width: 100%;
+    background: $black1;
+
+    .reservation-container {
+      width: 60%;
+      margin: 0 auto;
+      padding: 65px 0;
+      display: grid;
+      grid-template-columns: 34% 66%;
+
+      .reservation-left {
+        background: black;
+
+        .timeOpen-container {
+          padding: 10px;
+          margin: 15px;
+          border: 1px dashed white;
+
+          h2 {
+            font-family: $font2;
+            color: $white;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-top: -10px;
+            font-size: 1.2rem;
+          }
+
+          img {
+            margin: 20px 0 25px;
+          }
+
+          h3 {
+            color: $brown1;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 20px 0;
+          }
+
+          p {
+            color: $white;
+            font-size: 0.9rem;
+            font-family: $font1;
+          }
+        }
+      }
+
+      .reservation-right {
+        background: white;
+        padding: 50px 10px;
+
+        .special-font {
+          font-weight: 600;
+          margin-bottom: -10px;
+        }
+
+        img {
+          margin: 25px 0;
+        }
+
+      }
     }
   }
 }
