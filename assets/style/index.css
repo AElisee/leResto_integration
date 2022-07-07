@@ -84,6 +84,16 @@ header nav .nav-container {
       grid-template-columns: 10% 75% 15%;
 }
 
+@media screen and (max-width: 768px) {
+  header nav .nav-container {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 header nav span {
   font-family: allura;
   color: #eeeeee;
@@ -118,6 +128,12 @@ header nav .navbar li a {
   font-size: 0.9rem;
 }
 
+@media screen and (max-width: 768px) {
+  header nav .navbar {
+    display: none;
+  }
+}
+
 header nav .social-network {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,6 +145,12 @@ header nav .social-network {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  header nav .social-network {
+    gap: 20px;
+  }
 }
 
 header > div {
@@ -231,8 +253,8 @@ main .section1 .section1-left div .text {
 main .section1 .section1-left div .men-avatar {
   display: block;
   margin: 0 auto;
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   background: url(../img/avatar-01.jpg) center/cover;
 }
@@ -254,6 +276,18 @@ main .section1 .section1-right {
   background: url(../img/store-01.jpg) center/cover;
 }
 
+@media screen and (max-width: 768px) {
+  main .section1 .section1-right {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main .section1 {
+    display: block;
+  }
+}
+
 main .section2 {
   position: relative;
 }
@@ -265,10 +299,16 @@ main .section2 .section2-top {
   background: #21201e;
 }
 
-main .section2 .section2-top img.icon {
-  width: 15px;
-  height: 15px;
-  margin: 20px auto;
+@media screen and (max-width: 991.98px) {
+  main .section2 .section2-top {
+    height: 100vh;
+  }
+}
+
+main .section2 .section2-top img {
+  width: 45px;
+  height: 45px;
+  margin: 25px auto;
 }
 
 main .section2 .section2-top .menu {
@@ -302,13 +342,19 @@ main .section2 .section2-top .menu ul li a {
 
 main .section2 .section2-hover {
   position: absolute;
-  top: 150px;
+  top: 25%;
   left: 50%;
   width: 60%;
   background: #eeeeee;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   border-top: 5px solid #a67245;
+}
+
+@media screen and (max-width: 991.98px) {
+  main .section2 .section2-hover {
+    top: 12%;
+  }
 }
 
 main .section2 .section2-hover .foods-card {
@@ -320,6 +366,12 @@ main .section2 .section2-hover .foods-card {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px;
+}
+
+@media screen and (max-width: 991.98px) {
+  main .section2 .section2-hover .foods-card {
+    display: block;
+  }
 }
 
 main .section2 .section2-hover .foods-card .card-left,
@@ -400,6 +452,7 @@ main .section2 .section2-hover .foods-card .card-right .price {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-right: 10px;
   font-size: 1rem;
   color: #a67245;
   font-family: poppins;
@@ -410,14 +463,20 @@ main .section2 .bg-menu {
   background: url(../img/bg-menu-01.jpg) center/cover;
 }
 
+@media screen and (max-width: 991.98px) {
+  main .section2 .bg-menu {
+    height: 100vh;
+  }
+}
+
 main .reservation {
-  height: 85vh;
   width: 100%;
   background: #21201e;
+  padding-bottom: 25px;
 }
 
 main .reservation .reservation-container {
-  width: 60%;
+  width: 75%;
   margin: 0 auto;
   padding: 65px 0;
   display: -ms-grid;
@@ -426,8 +485,15 @@ main .reservation .reservation-container {
       grid-template-columns: 34% 66%;
 }
 
+@media screen and (max-width: 1095px) {
+  main .reservation .reservation-container {
+    display: block;
+  }
+}
+
 main .reservation .reservation-container .reservation-left {
   background: black;
+  padding: 10px;
 }
 
 main .reservation .reservation-container .reservation-left .timeOpen-container {
@@ -464,7 +530,7 @@ main .reservation .reservation-container .reservation-left .timeOpen-container p
 }
 
 main .reservation .reservation-container .reservation-right {
-  background: white;
+  background: #eeeaea;
   padding: 50px 10px;
 }
 
@@ -475,5 +541,522 @@ main .reservation .reservation-container .reservation-right .special-font {
 
 main .reservation .reservation-container .reservation-right img {
   margin: 25px 0;
+}
+
+main .reservation .reservation-container .reservation-right .form-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% 34% 33%;
+      grid-template-columns: 33% 34% 33%;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "sel date time" "name phone email" "btn btn btn";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form select {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: sel;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form .date {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: date;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form .time {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: time;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form .name {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: name;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form .phone {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: phone;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form .email {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: email;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form .btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: btn;
+  padding: 10px 30px;
+  margin: 30px auto;
+  background: #21201e;
+  color: white;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-family: poppins;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form .btn:hover {
+  background: white;
+  color: #21201e;
+  border: 1px solid #b1b6a7;
+  -webkit-box-shadow: 5px 3px 10px #b1b6a7;
+          box-shadow: 5px 3px 10px #b1b6a7;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form select,
+main .reservation .reservation-container .reservation-right .form-container form input[type="text"],
+main .reservation .reservation-container .reservation-right .form-container form input[type="date"],
+main .reservation .reservation-container .reservation-right .form-container form input[type="time"] {
+  height: 40px;
+  margin: 5px;
+  margin-bottom: 10px;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #21201e;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form select::-webkit-input-placeholder,
+main .reservation .reservation-container .reservation-right .form-container form input[type="text"]::-webkit-input-placeholder,
+main .reservation .reservation-container .reservation-right .form-container form input[type="date"]::-webkit-input-placeholder,
+main .reservation .reservation-container .reservation-right .form-container form input[type="time"]::-webkit-input-placeholder {
+  color: #595956;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form select:-ms-input-placeholder,
+main .reservation .reservation-container .reservation-right .form-container form input[type="text"]:-ms-input-placeholder,
+main .reservation .reservation-container .reservation-right .form-container form input[type="date"]:-ms-input-placeholder,
+main .reservation .reservation-container .reservation-right .form-container form input[type="time"]:-ms-input-placeholder {
+  color: #595956;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form select::-ms-input-placeholder,
+main .reservation .reservation-container .reservation-right .form-container form input[type="text"]::-ms-input-placeholder,
+main .reservation .reservation-container .reservation-right .form-container form input[type="date"]::-ms-input-placeholder,
+main .reservation .reservation-container .reservation-right .form-container form input[type="time"]::-ms-input-placeholder {
+  color: #595956;
+}
+
+main .reservation .reservation-container .reservation-right .form-container form select::placeholder,
+main .reservation .reservation-container .reservation-right .form-container form input[type="text"]::placeholder,
+main .reservation .reservation-container .reservation-right .form-container form input[type="date"]::placeholder,
+main .reservation .reservation-container .reservation-right .form-container form input[type="time"]::placeholder {
+  color: #595956;
+}
+
+main .event {
+  background: #21201e;
+  position: relative;
+  padding-bottom: 200px;
+}
+
+@media screen and (max-width: 991px) {
+  main .event {
+    display: none;
+  }
+}
+
+main .event .event-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+main .event .event-container .event-head {
+  padding: 45px 0;
+}
+
+main .event .event-container .event-head .special-font {
+  display: inline-block;
+  margin-bottom: -5px;
+}
+
+main .event .event-container .event-head h2 {
+  color: #eeeeee;
+  font-weight: 500;
+  font-family: poppins;
+}
+
+main .event .event-container .event-head img {
+  height: 40px;
+  width: 40px;
+  margin: 20px 0;
+}
+
+main .event .event-container .event-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+      grid-template-areas: "t1 t3" "t2 t3";
+  margin-bottom: 30px;
+}
+
+main .event .event-container .event-card .card-leftTop {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: t1;
+}
+
+main .event .event-container .event-card .card-leftTop .img-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(../img/event-01.jpg) center/cover;
+}
+
+main .event .event-container .event-card .card-leftBottom {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: t2;
+  margin-top: 10px;
+}
+
+main .event .event-container .event-card .card-leftBottom .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background: url(../img/event-02.jpg) center/cover;
+}
+
+main .event .event-container .event-card .card-leftBottom,
+main .event .event-container .event-card .card-leftTop {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 34% 66%;
+      grid-template-columns: 34% 66%;
+}
+
+main .event .event-container .event-card .card-leftBottom .date-container,
+main .event .event-container .event-card .card-leftTop .date-container {
+  width: 65px;
+  height: 65px;
+  background: #21201e;
+  color: white;
+  line-height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .event .event-container .event-card .card-leftBottom .date-container h2,
+main .event .event-container .event-card .card-leftBottom .date-container p,
+main .event .event-container .event-card .card-leftTop .date-container h2,
+main .event .event-container .event-card .card-leftTop .date-container p {
+  font-family: roboto;
+  font-weight: 500;
+}
+
+main .event .event-container .event-card .card-leftBottom .event-content,
+main .event .event-container .event-card .card-leftTop .event-content {
+  background: white;
+  font-family: roboto;
+  text-align: left;
+  padding: 15px;
+  letter-spacing: 2px;
+}
+
+main .event .event-container .event-card .card-leftBottom .event-content h3,
+main .event .event-container .event-card .card-leftTop .event-content h3 {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+main .event .event-container .event-card .card-leftBottom .event-content p,
+main .event .event-container .event-card .card-leftTop .event-content p {
+  margin: 20px auto;
+  font-size: 0.7rem;
+  color: #b1b6a7;
+  font-weight: 600;
+}
+
+main .event .event-container .event-card .card-leftBottom .event-content h6,
+main .event .event-container .event-card .card-leftTop .event-content h6 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+main .event .event-container .event-card .card-right {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: t3;
+  background: url(../img/event-03.jpg) center/cover;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+main .event .event-container .event-card .card-right .event-content {
+  background: white;
+  font-family: roboto;
+  padding-bottom: 20px;
+}
+
+main .event .event-container .event-card .card-right .event-content .date-container {
+  margin: 0 auto;
+  width: 65px;
+  height: 65px;
+  background: #21201e;
+  color: white;
+  line-height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .event .event-container .event-card .card-right .event-content .date-container h2,
+main .event .event-container .event-card .card-right .event-content .date-container p {
+  font-family: roboto;
+  color: white;
+  font-weight: 500;
+  margin: 0;
+}
+
+main .event .event-container .event-card .card-right .event-content h3 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding: 20px 0;
+}
+
+main .event .event-container .event-card .card-right .event-content p {
+  margin: 10px auto;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #b1b6a7;
+  font-weight: 600;
+}
+
+main .event .event-container .event-card .card-right .event-content h6 {
+  margin: 30px auto;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding-top: 30px;
+  letter-spacing: 2px;
+}
+
+main .event .about {
+  background: #eeeeee;
+  width: 70%;
+  min-height: 300px;
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .event .about .about-container {
+  position: relative;
+  width: 80%;
+  height: 300px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: roboto;
+}
+
+main .event .about .about-container .woman-avatar {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  margin: 0 auto;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: url(../img/avatar-02.jpg) center/cover;
+}
+
+main .event .about .about-container p {
+  letter-spacing: 1px;
+  line-height: 36px;
+}
+
+main .event .about .about-container h3 {
+  padding: 30px 0 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+main .event .about .about-container h5 {
+  color: #a67245;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+footer li {
+  display: inline-block;
+}
+
+footer .map {
+  width: 100%;
+  height: 50vh;
+  background: url(../img/gmap.jpg) center/cover;
+}
+
+footer .contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+@media screen and (max-width: 768px) {
+  footer .contact {
+    display: block;
+  }
+}
+
+footer .contact .contact-left {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.911);
+  padding: 20px;
+}
+
+footer .contact .contact-left .left-container {
+  width: 70%;
+  text-align: left;
+  color: #4C4C4C;
+  font-family: roboto;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  footer .contact .contact-left {
+    display: none;
+  }
+}
+
+footer .contact .contact-right {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.894);
+  padding: 20px 40px;
+}
+
+footer .contact .contact-right .right-container h2 {
+  color: white;
+  font-family: roboto;
+  font-size: 0.9rem;
+}
+
+footer .contact .contact-right .right-container .newletter {
+  text-align: left;
+}
+
+footer .contact .contact-right .right-container .newletter input {
+  background: none;
+  margin: 5px 0;
+  padding: 7px;
+  border: 1px solid #a67245;
+}
+
+footer .contact .contact-right .right-container .social-network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+footer .contact .contact-right .right-container .social-network ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .contact .contact-right .right-container .social-network ul .icon {
+  width: 15px;
+  height: 15px;
+  -webkit-filter: invert(0.3);
+          filter: invert(0.3);
 }
 /*# sourceMappingURL=index.css.map */

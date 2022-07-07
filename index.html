@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./assets/img/ic-cricle.png" />
     <title>Le Resto - mon intégration</title>
   </head>
   <body>
@@ -90,7 +98,6 @@
             </ul>
           </div>
         </div>
-
         <div class="section2-hover">
           <div class="foods-card">
             <div class="card-left">
@@ -208,95 +215,121 @@
               <h3 class="special-font">Reservation</h3>
               <h2>Online booking</h2>
               <img src="./assets/img/ic-plate.png" alt="" />
-              <form action="">
-                <select name="" id="">
-                  <option value="">people</option>
-                  <option value="">option 1</option>
-                  <option value="">option 2</option>
-                </select>
-                <input type="date" class="date" />
-                <input type="time" class="time" />
-                <input type="text" class="name" placeholder="Name" />
-                <input type="text" class="phone" placeholder="Phone" />
-                <input type="text" class="email" placeholder="Email" />
-                <input type="submit" class="btn" value="book now" />
-              </form>
+              <div class="form-container">
+                <form action="">
+                  <select name="" id="">
+                    <option value="">people</option>
+                    <option value="">option 1</option>
+                    <option value="">option 2</option></select
+                  ><input type="date" class="date" /><input
+                    type="time"
+                    class="time"
+                  /><input type="text" class="name" placeholder="Name" /><input
+                    type="text"
+                    class="phone"
+                    placeholder="Phone"
+                  /><input
+                    type="text"
+                    class="email"
+                    placeholder="Email"
+                  /><input type="submit" class="btn" value="book now" />
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="envent">
+      <section class="event">
         <div class="event-container">
           <div class="event-head">
-            <h3 class="special-font">Upcoming</h3>
+            <span class="special-font">Upcoming</span>
             <h2>our event</h2>
             <img src="./assets/img/ic-plate-big.png" alt="" />
           </div>
           <div class="event-card">
-            <div class="event-card-leftTop">
+            <div class="card-leftTop">
               <div class="img-container">
                 <div class="date-container">
-                  <h2 id="day">08</h2>
-                  <p id="month">july</p>
+                  <div>
+                    <h2 id="day">08</h2>
+                    <p id="month">july</p>
+                  </div>
                 </div>
               </div>
               <div class="event-content">
                 <div>
                   <h3>Lorem, ipsum dolor.</h3>
                   <p>
-                    <span></span>restaurant Resto <span></span>10:00pm - 6:00am
+                    <span><i class="fa-solid fa-location-dot"></i></span
+                    >Restaurant Resto
+                    <span><i class="fa-regular fa-clock"></i></span>10:00pm -
+                    6:00am
                   </p>
-                  <h2>buy tickets</h2>
+                  <h6>buy tickets</h6>
                 </div>
               </div>
             </div>
-            <div class="event-card-leftbottom">
+            <div class="card-leftBottom">
               <div class="img-container">
                 <div class="date-container">
-                  <h2 id="day">08</h2>
-                  <p id="month">july</p>
+                  <div>
+                    <h2 id="day">18</h2>
+                    <p id="month">july</p>
+                  </div>
                 </div>
               </div>
               <div class="event-content">
                 <div>
                   <h3>Lorem, ipsum dolor.</h3>
                   <p>
-                    <span></span>restaurant Resto <span></span>10:00pm - 6:00am
+                    <span><i class="fa-solid fa-location-dot"></i></span
+                    >restaurant Resto
+                    <span><i class="fa-regular fa-clock"></i></span>10:00pm -
+                    6:00am
                   </p>
-                  <h2>buy tickets</h2>
+                  <h6>buy tickets</h6>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="event-card-right">
-            <div class="event-content">
-              <div>
+            <div class="card-right">
+              <div class="event-content">
                 <div class="date-container">
-                  <h2 id="day">07</h2>
-                  <p id="month">August</p>
+                  <div>
+                    <h2 id="day">07</h2>
+                    <p id="month">August</p>
+                  </div>
                 </div>
-                <h3>Lorem, ipsum dolor.</h3>
+                <h3>Lorem ipsum dolor consectetur adipisicing.</h3>
                 <p>
-                  <span></span>restaurant Resto <span></span>10:00pm - 6:00am
+                  <span><i class="fa-solid fa-location-dot"></i></span
+                  >restaurant Resto
+                  <span><i class="fa-regular fa-clock"></i></span>10:00pm -
+                  6:00am
                 </p>
-                <h2>buy tickets</h2>
+                <h6>buy tickets</h6>
               </div>
             </div>
           </div>
           <div class="about">
             <div class="about-container">
-              <span><img src="./assets/img/avatar-02.jpg" alt="" /></span>
-              <p>
-                <span>"</span> Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Vero saepe neque quibusdam, necessitatibus quo
-                aut ab excepturi magni pariatur sequi, dolor in obcaecati,
-                ducimus vitae ! Quas repellendus amet, vel laboriosam autem quod
-                velit necessitatibus quae. pariatur sequi, dolor in obcaecati,
-                ducimus vitae ! Quas repellendus amet, vel laboriosam autem quod
-                velit necessitatibus quae. <span>"</span>
-              </p>
-              <h3>Rusell Stephens</h3>
-              <p>CEO - HeadPassion</p>
+              <div class="content">
+                <span class="woman-avatar"></span>
+                <p class="text">
+                  <sup
+                    ><span><i class="fa-solid fa-quote-left"></i></span
+                  ></sup>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+                  saepe neque quibusdam, necessitatibus quo aut ab excepturi
+                  magni pariatur sequi, dolor in obcaecati, ducimus vitae ! Quas
+                  repellendus amet, vel laboriosam autem quod velit
+                  necessitatibus quae.
+                  <sup
+                    ><span><i class="fa-solid fa-quote-right"></i></span
+                  ></sup>
+                </p>
+                <h3>Rusell Stephens</h3>
+                <h5>CEO - HeadPassion</h5>
+              </div>
             </div>
           </div>
         </div>
@@ -306,8 +339,8 @@
       <div class="map"></div>
       <div class="contact">
         <div class="contact-left">
-          <div class="contact-left-content">
-            <h3 class="special-font">Resto</h3>
+          <div class="left-container">
+            <span class="special-font">Resto</span>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem recusandae iusto error, itaque maxime tenetur sed vel
@@ -317,50 +350,47 @@
           </div>
         </div>
         <div class="contact-right">
-          <div class="contact-right-container">
+          <div class="right-container">
             <div class="newletter">
               <h2>newletter</h2>
               <input type="text" placeholder="your email address" />
             </div>
             <div class="social-network">
-              <div>
-                <h2>follow us :</h2>
-                <span
-                  ><ul>
-                    <li>
-                      <a href="#"
-                        ><img
-                          class="icon"
-                          src="./assets/icons/fb.svg"
-                          alt="facebook icon"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img
-                          class="icon"
-                          src="./assets/icons/twitter.svg"
-                          alt="twitter icon"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img
-                          class="icon"
-                          src="./assets/icons/insta.svg"
-                          alt="instagram icon"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img
-                          class="icon"
-                          src="./assets/icons/pint.svg"
-                          alt="pinterest icon"
-                      /></a>
-                    </li></ul
-                ></span>
-              </div>
+              <h2>follow us :</h2>
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img
+                      class="icon"
+                      src="./assets/icons/fb.svg"
+                      alt="facebook icon"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      class="icon"
+                      src="./assets/icons/twitter.svg"
+                      alt="twitter icon"
+                  /></a>
+                </li>
+                <li>
+                  <a href=""
+                    ><img
+                      class="icon"
+                      src="./assets/icons/insta.svg"
+                      alt="instagram icon"
+                  /></a>
+                </li>
+                <li>
+                  <a href=""
+                    ><img
+                      class="icon"
+                      src="./assets/icons/pint.svg"
+                      alt="pinterest icon"
+                  /></a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
